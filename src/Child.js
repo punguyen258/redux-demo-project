@@ -8,7 +8,9 @@ class Child extends React.Component {
   render() {
     return (
       <div className="green">
-        <button onClick={this.inc}>+</button>
+        <button onClick={this.inc}>Add to cart</button>
+        <button onClick={this.inc}>Add to cart</button>
+        <button onClick={this.inc}>Add to cart</button>
       </div>
     )
   }

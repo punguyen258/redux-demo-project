@@ -1,15 +1,22 @@
 import React from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class Counter extends React.Component {
   dec = () => {
-    this.props.dispatch({ type: 'DECREMENT' });
+    this.props.dispatch({ type: 'DECREMENT' })
   }
   render() {
     return (
       <div className="blue">
-        <button onClick={this.dec}>-</button>
-        <h1>{this.props.count}</h1>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Nav>
+            <Nav.Link href="#pricing">
+              Cart <span>{this.props.count}</span>
+            </Nav.Link>
+          </Nav>
+        </Navbar>
+        {/* <button onClick={this.dec}>-</button> */}
       </div>
     )
   }
